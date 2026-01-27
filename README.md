@@ -1,2 +1,2 @@
-# dsa
-my go to repo for dsa
+# DSA
+My go-to repo for DSA.
