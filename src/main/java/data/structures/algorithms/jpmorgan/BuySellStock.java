@@ -16,12 +16,16 @@ public class BuySellStock {
     Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
     Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.*/
 
+
     public static int maxProfit(int[] prices) {
 
         int profit = 0;
+        // assume first element as min price
         int min = prices[0];
         for(int i=0; i < prices.length; i++) {
+            // track the min price
             min = Math.min(prices[i], min);
+            // simultaneously calculate and track max profit
             profit = Math.max(profit, prices[i] - min);
         }
 
