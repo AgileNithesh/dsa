@@ -1,0 +1,23 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+.project
+.settings/
+
+# Compiled classes
+*.class
+target/
+build/
+out/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# LeetCode practice
+leetcode_session
+*.session.*

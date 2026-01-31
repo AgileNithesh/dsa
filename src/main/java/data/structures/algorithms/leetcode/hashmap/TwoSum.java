@@ -1,4 +1,4 @@
-package data.structures.algorithms.leetcode;
+package data.structures.algorithms.leetcode.hashmap;
 
 import java.util.HashMap;
 import java.util.Map;

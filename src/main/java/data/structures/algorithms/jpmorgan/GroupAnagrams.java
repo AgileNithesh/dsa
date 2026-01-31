@@ -30,7 +30,11 @@ public class GroupAnagrams {
         Map<String, List<String>> anagramMap = new HashMap<>();
 
         for(String s: strs){
+
+            // convert each String to char array
             char[] c = s.toCharArray();
+            // sort the char array -- rearranges in alphabetical order,
+            // so if the key exists in map value gets appended
             Arrays.sort(c);
             String key = new String(c);
             anagramMap.computeIfAbsent(key, value -> new ArrayList<>()).add(s);

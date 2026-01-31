@@ -10,6 +10,8 @@ public class Try {
         s[1] = null;
         IO.println(Arrays.toString(s));
         IO.println("".length());
+
+        IO.println(Integer.MAX_VALUE);
     }
 
 
