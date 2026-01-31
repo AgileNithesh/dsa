@@ -22,7 +22,47 @@ public class StringToInteger {
     }
 
 
-    public static int myAtoi(String s) {
+    public static int myAtoi(String s){
+
+
+        int i = 0;
+        int res = 0;
+        int sign = 1;
+
+        if(s.length() == 0){
+            return 0;
+        }
+
+        // skip leading spaces
+        while(i<s.length() && s.charAt(i) == ' '){
+            i++;
+        }
+
+        if(i == s.length()) return 0;
+
+        if(s.charAt(i) == '-'){
+            sign = -1;
+            i++;
+        } else if(s.charAt(i) == '+'){
+            i++;
+        }
+
+        while(i < s.length() && Character.isDigit(s.charAt(i))) {
+
+            int digit = s.charAt(i) - '0';
+
+            if(res > Integer.MAX_VALUE / 10 || (res == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)){
+                return sign == -1 ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+            }
+
+            res = (res * 10) + digit;
+            i++;
+        }
+        return res * sign;
+
+    }
+
+    /*public static int myAtoi(String s) {
 
         int i = 0;
         long res = 0;
@@ -59,7 +99,7 @@ public class StringToInteger {
         }
         return (int) (res * sign);
 
-    }
+    }*/
 
 
     /*public static int myAtoi(String s) {
