@@ -11,7 +11,10 @@ public class Try {
         IO.println(Arrays.toString(s));
         IO.println("".length());
 
-        IO.println(Integer.MAX_VALUE);
+        if(1 != 2 && 2 != 3){
+
+        }
+        IO.println();
     }
 
 
